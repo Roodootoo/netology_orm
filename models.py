@@ -24,6 +24,8 @@ class Shop(Base):
     __tablename__ =  'shops'
     id = sq.Column(sq.Integer, primary_key=True)
     name = sq.Column(sq.String, unique=True)
+    def __repr__(self):
+        return f"Shop(id={self.id}, name={self.name})"
 
 
 class Stock(Base):
